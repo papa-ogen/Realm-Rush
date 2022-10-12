@@ -1,5 +1,0 @@
-Temp/ScriptUpdater/325267976/343087480_SunShafts.cs => Assets/SKY city lite/Standard Assets/Effects/ImageEffects/Scripts/SunShafts.cs
-Temp/ScriptUpdater/325267976/1843063433_AICharacterControl.cs => Assets/SKY city lite/Standard Assets/Characters/ThirdPersonCharacter/Scripts/AICharacterControl.cs
-Temp/ScriptUpdater/325267976/1992548427_Bloom.cs => Assets/SKY city lite/Standard Assets/Effects/ImageEffects/Scripts/Bloom.cs
-Temp/ScriptUpdater/325267976/1184585332_DepthOfField.cs => Assets/SKY city lite/Standard Assets/Effects/ImageEffects/Scripts/DepthOfField.cs
-Temp/ScriptUpdater/325267976/1125373075_BloomAndFlares.cs => Assets/SKY city lite/Standard Assets/Effects/ImageEffects/Scripts/BloomAndFlares.cs
