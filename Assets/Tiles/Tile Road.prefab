@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2405124074301338133}
   - component: {fileID: 1275293989250124006}
+  - component: {fileID: 7287499388116805194}
   m_Layer: 0
   m_Name: Tile Road
   m_TagString: Untagged
@@ -46,6 +47,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93a5f90a6f7c489397f3a3804ec52a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlaceable: 0
+  towerPrefab: {fileID: 0}
+--- !u!65 &7287499388116805194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877864949126864367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8007807147593910550
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,15 +260,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3003750037285116573, guid: fea6a367ad578b940810dc5742cf10ba, type: 3}
       propertyPath: m_LocalScale.x
-      value: 23
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3003750037285116573, guid: fea6a367ad578b940810dc5742cf10ba, type: 3}
       propertyPath: m_LocalScale.y
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 3003750037285116573, guid: fea6a367ad578b940810dc5742cf10ba, type: 3}
       propertyPath: m_LocalScale.z
-      value: 23
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3003750037285116573, guid: fea6a367ad578b940810dc5742cf10ba, type: 3}
       propertyPath: m_LocalPosition.x
