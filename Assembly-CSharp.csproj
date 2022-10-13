@@ -198,6 +198,8 @@
     <Compile Include="Assets/Asset Packs/Sci Fi Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
     <Compile Include="Assets/Enemies/ObjectPool.cs" />
     <Compile Include="Assets/Enemies/Enemy.cs" />
+    <Compile Include="Assets/Bank/Bank.cs" />
+    <Compile Include="Assets/Towers/Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Asset Packs/SKY city lite/Standard Assets/Effects/ImageEffects/Shaders/Tonemapper.shader" />

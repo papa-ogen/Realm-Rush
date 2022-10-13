@@ -40,16 +40,16 @@ public class TargetLocator : MonoBehaviour
     private void AimWeapon()
     {
         float targetDistance = Vector3.Distance(transform.position, target.position);
-
         weapon.LookAt(target);
 
         if(targetDistance < range)
         {
             Attack(true);
-        } else {
+        }
+        else
+        {
             Attack(false);
         }
-
     }
 
     void Attack(bool isActive)

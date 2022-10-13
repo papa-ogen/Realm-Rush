@@ -487,6 +487,7 @@
 "Assets/Asset Packs/VolumetricLines/Scripts/VolumetricLineBehavior.cs"
 "Assets/Asset Packs/VolumetricLines/Scripts/VolumetricLineStripBehavior.cs"
 "Assets/Asset Packs/VolumetricLines/Scripts/VolumetricLineVertexData.cs"
+"Assets/Bank/Bank.cs"
 "Assets/Enemies/Enemy.cs"
 "Assets/Enemies/EnemyHealth.cs"
 "Assets/Enemies/EnemyMover.cs"
@@ -494,6 +495,7 @@
 "Assets/Tiles/CoordinateLabeler.cs"
 "Assets/Tiles/Waypoint.cs"
 "Assets/Towers/TargetLocator.cs"
+"Assets/Towers/Tower.cs"
 -langversion:9.0
 
 /deterministic

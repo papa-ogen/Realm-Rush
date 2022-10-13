@@ -6,14 +6,14 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
-    [SerializeField] int poolSize = 5;
-    [SerializeField] float spawnTimer = 1f;
+    [SerializeField][Range(0f, 50f)] int poolSize = 5;
+    [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
 
     GameObject[] pool;
 
     private void Awake()
     {
-        PopulatePool();    
+        PopulatePool();
     }
 
     void Start()
@@ -36,6 +36,7 @@ public class ObjectPool : MonoBehaviour
     {
         while(true)
         {
+            EnableObjectInPool();
             yield return new WaitForSeconds(spawnTimer);
         }
     }
