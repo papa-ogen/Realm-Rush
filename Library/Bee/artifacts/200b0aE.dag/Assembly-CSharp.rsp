@@ -492,6 +492,8 @@
 "Assets/Enemies/EnemyHealth.cs"
 "Assets/Enemies/EnemyMover.cs"
 "Assets/Enemies/ObjectPool.cs"
+"Assets/Pathfinding/GridManager.cs"
+"Assets/Pathfinding/Node.cs"
 "Assets/Tiles/CoordinateLabeler.cs"
 "Assets/Tiles/Waypoint.cs"
 "Assets/Towers/TargetLocator.cs"

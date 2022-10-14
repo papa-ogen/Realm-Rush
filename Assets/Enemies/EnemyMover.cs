@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
@@ -60,11 +61,15 @@ public class EnemyMover : MonoBehaviour
             Vector3 endPosition = new Vector3(waypoint.transform.position.x, waypoint.transform.position.y + yOffset, waypoint.transform.position.z); ;
             float travelPercent = 0;
 
-            transform.LookAt(endPosition);
+            var targetRotation = Quaternion.LookRotation(waypoint.transform.position - transform.position);
 
-            while(travelPercent < 1f) {
+
+            //transform.LookAt(endPosition);
+
+            while (travelPercent < 1f) {
                 travelPercent += Time.deltaTime * speed;
                 transform.position = Vector3.Lerp(startPosition, endPosition, travelPercent);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, travelPercent);
 
                 yield return new WaitForEndOfFrame();
             }
