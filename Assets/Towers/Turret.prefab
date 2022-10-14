@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 1108324972682026434}
   - component: {fileID: 1108324972682026435}
   - component: {fileID: 1108324972682026436}
-  - component: {fileID: 1108324972682026437}
   - component: {fileID: 1108324972682026438}
-  - component: {fileID: 8167051634659671762}
   - component: {fileID: -7601903731199287792}
   m_Layer: 0
   m_Name: Turret
@@ -88,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1108324972682026437
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108324972682026439}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1108324972682026438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,20 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 1108324972682026434}
   projectileParticles: {fileID: 5034323321171297060}
-  range: 15
---- !u!114 &8167051634659671762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108324972682026439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d4c8710f5244bd299a2183e3e0a21e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitPoints: 5
+  range: 25
 --- !u!114 &-7601903731199287792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f4934eb95df46bbab0fe158944f336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 75
 --- !u!1 &3828785968116411110
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +220,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -426,7 +399,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.4
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2

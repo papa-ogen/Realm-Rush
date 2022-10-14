@@ -191,8 +191,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000011762054444}
-  m_LocalRotation: {x: 8.881784e-15, y: 0.27235484, z: -0.000000011905006, w: 0.9621969}
-  m_LocalPosition: {x: 0.25208652, y: 5.0548353, z: 0.89059234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.0548353, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -200,7 +200,7 @@ Transform:
   - {fileID: 7106105395090565481}
   m_Father: {fileID: 4000010304338452}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 31.609, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000012386285504
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -261,6 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010737274380}
   - component: {fileID: 2550948916705040012}
+  - component: {fileID: 898279597677592529}
   m_Layer: 0
   m_Name: Turret 1a
   m_TagString: Untagged
@@ -276,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000012174300454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.911498e-16, z: -15}
+  m_LocalPosition: {x: 0, y: 3.911498e-16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -297,7 +298,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 4000012047928590}
-  target: {fileID: 0}
+  projectileParticles: {fileID: 9038553375368229382}
+  range: 20
+--- !u!114 &898279597677592529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012174300454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f4934eb95df46bbab0fe158944f336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 75
 --- !u!1 &1000012338640140
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,5 +626,10 @@ PrefabInstance:
 --- !u!4 &7106105395090565481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7664225398992731362, guid: 18b443eaa0f3b48f894f451a81499bb7, type: 3}
+  m_PrefabInstance: {fileID: 630848446145811851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9038553375368229382 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8479817651363506061, guid: 18b443eaa0f3b48f894f451a81499bb7, type: 3}
   m_PrefabInstance: {fileID: 630848446145811851}
   m_PrefabAsset: {fileID: 0}

@@ -7,7 +7,7 @@ public class TargetLocator : MonoBehaviour
 {
     [SerializeField] Transform weapon;
     [SerializeField] ParticleSystem projectileParticles;
-    [SerializeField] float range = 15f;
+    [SerializeField] float range = 20f;
 
     Transform target;
 
@@ -40,6 +40,7 @@ public class TargetLocator : MonoBehaviour
     private void AimWeapon()
     {
         float targetDistance = Vector3.Distance(transform.position, target.position);
+
         weapon.LookAt(target);
 
         if(targetDistance < range)
