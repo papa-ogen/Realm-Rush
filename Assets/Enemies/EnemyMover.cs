@@ -6,44 +6,52 @@ using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
 {
-    [SerializeField] List<Waypoint> path = new List<Waypoint>();
+    List<Node> path = new List<Node>();
     [SerializeField] [Range(0f, 5f)] float speed = 1f;
     [SerializeField] float yOffset = 5f;
 
     Enemy enemy;
+    GridManager gridManager;
+    Pathfinder pathfinder;
 
-    private void Start()
+    private void Awake()
     {
         enemy = GetComponent<Enemy>();
+        gridManager = FindObjectOfType<GridManager>();
+        pathfinder = FindObjectOfType<Pathfinder>();
     }
 
     void OnEnable()
     {
-        FindPath();
         ReturnToStart();
-        StartCoroutine(FollowPath());
+        RecalculatePath(true);
     }
 
-
-    void FindPath()
+    void RecalculatePath(bool resetPath)
     {
-        path.Clear();
+        Vector2Int coordinates = new Vector2Int();
 
-        GameObject parent = GameObject.FindGameObjectWithTag("Path");
-        foreach(Transform child in parent.transform)
+        if(resetPath)
         {
-            Waypoint waypoint = child.GetComponent<Waypoint>();
-
-            if(waypoint != null)
-            {
-                path.Add(waypoint);
-            }
+            coordinates = pathfinder.StartCoordinates;
+        } else
+        {
+            coordinates = gridManager.GetCoordinatesFromPosition(transform.position);
         }
+
+        StopAllCoroutines();
+
+        path.Clear();
+        path = pathfinder.GetNewPath(coordinates);
+
+        StartCoroutine(FollowPath());
     }
 
     void ReturnToStart()
     {
-        Vector3 position = new Vector3(path[0].transform.position.x, path[0].transform.position.y + yOffset, path[0].transform.position.z);
+        Vector3 startPosition = gridManager.GetPositionFromCoordinates(pathfinder.StartCoordinates);
+        // Offset due to asset
+        Vector3 position = new Vector3(startPosition.x, startPosition.y + yOffset, startPosition.z);
         transform.position = position;
     }
 
@@ -55,13 +63,14 @@ public class EnemyMover : MonoBehaviour
 
     IEnumerator FollowPath()
     {
-        foreach(Waypoint waypoint in path)
+        for(int i = 1; i < path.Count; i++)
         {
             Vector3 startPosition = transform.position;
-            Vector3 endPosition = new Vector3(waypoint.transform.position.x, waypoint.transform.position.y + yOffset, waypoint.transform.position.z); ;
+            Vector3 destinationPosition = gridManager.GetPositionFromCoordinates(path[i].coordinates);
+            Vector3 endPosition = new Vector3(destinationPosition.x, destinationPosition.y + yOffset, destinationPosition.z); ;
             float travelPercent = 0;
 
-            var targetRotation = Quaternion.LookRotation(waypoint.transform.position - transform.position);
+            var targetRotation = Quaternion.LookRotation(destinationPosition - transform.position);
 
 
             //transform.LookAt(endPosition);

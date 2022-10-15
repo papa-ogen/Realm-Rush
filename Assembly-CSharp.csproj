@@ -132,7 +132,7 @@
     <Compile Include="Assets/Asset Packs/Sci Fi Assets/PostProcessing/Runtime/PostProcessingBehaviour.cs" />
     <Compile Include="Assets/Asset Packs/Sci Fi Assets/PostProcessing/Runtime/Models/EyeAdaptationModel.cs" />
     <Compile Include="Assets/Asset Packs/Sci Fi Assets/PostProcessing/Runtime/Utils/GraphicsUtils.cs" />
-    <Compile Include="Assets/Tiles/Waypoint.cs" />
+    <Compile Include="Assets/Tiles/Tile.cs" />
     <Compile Include="Assets/Asset Packs/SKY city lite/Standard Assets/Utility/SmoothFollow.cs" />
     <Compile Include="Assets/Asset Packs/Sci Fi Assets/PostProcessing/Utilities/CustomMotionTexture/ExampleWheelController.cs" />
     <Compile Include="Assets/Asset Packs/Sci Fi Assets/PostProcessing/Runtime/Components/VignetteComponent.cs" />
@@ -202,6 +202,7 @@
     <Compile Include="Assets/Asset Packs/Sci Fi Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
     <Compile Include="Assets/Pathfinding/Node.cs" />
     <Compile Include="Assets/Pathfinding/GridManager.cs" />
+    <Compile Include="Assets/Pathfinding/Pathfinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Asset Packs/SKY city lite/Standard Assets/Effects/ImageEffects/Shaders/Tonemapper.shader" />
